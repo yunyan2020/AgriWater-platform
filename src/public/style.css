@@ -1,0 +1,54 @@
+h1 {
+    color: red;
+}
+
+#card-div {
+    min-width: 40%;
+    margin: 5% auto 5% auto;
+}
+
+#form-area-div {
+    width: 55%;
+    margin: 5% auto 5% auto;
+}
+
+.table-area-div {
+    width: 70%;
+    margin: 5% auto 5% auto;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+#footer {
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+#footer_grid {
+    display: grid;
+    grid-template-columns: 1fr min-content 450px 1fr;
+}
+
+#btn-group {
+    margin-left: auto !important;
+}
+
+username {
+    color: #F2F2F2;
+    text-align: center;
+    align-items: center;
+    padding-right: 1em;
+    margin-left: auto !important;
+}
+
+/* style="display: flex; align-items: center; justify-self: center; */

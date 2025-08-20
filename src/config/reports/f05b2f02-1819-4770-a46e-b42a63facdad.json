@@ -1,0 +1,15 @@
+{
+    "workspace": "dc38a30d-9e6c-4ab0-8716-03e0d281585d",
+    "name": "Agri Water UK",
+    "reports": {
+        "Ground water levels": {
+            "Ground water levels": "d4607a64-6b23-463a-9cca-c12f20e6b8b6"
+        },
+        "Wensum DTC Soil moisture": {
+            "Wensum DTC Soil moisture": "697268e3-1745-4ff8-bb71-3b9b15701975"
+        },
+        "Wensum Wate Quanlity": {
+            "Wensum Wate Quanlity": "72fb4d08-9f9f-4605-9501-74ea1ea5bca2"
+        }
+    }
+}

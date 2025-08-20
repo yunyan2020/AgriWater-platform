@@ -1,0 +1,60 @@
+<!-- Copyright (c) Microsoft Corporation.
+Licensed under the MIT license. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/public/css/index.css" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <link
+      rel="stylesheet"
+      href="public/css/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <title>DiCyano: Dashboard</title>
+  </head>
+
+  <body>
+    <%- include('includes/header', {isAuthenticated: isAuthenticated, claims:
+    claims}); %>
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav"></ul>
+      <div id="navbar">
+        <div id="navbar_buttons"></div>
+        <div></div>
+        <img src="/public/images/bacteria.png" alt="Bacteria" />
+        <div
+          style="
+            display: flex;
+            justify-self: start;
+            align-items: center;
+            z-index: 100;
+          "
+        >
+          <img src="/public/images/AmoraAquaLogo.png" alt="Logo" />
+          <a style="margin-left: 0.5rem" href="https://amoreaqua.se/"
+            >AmoreAqua AB</a
+          >
+        </div>
+      </div>
+    </aside>
+    <main id="main" class="main">
+      <div id="bi_content">
+        <section id="report-container"></section>
+        <section class="error-container m-5"></section>
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <%- include('includes/footer'); %>
+    </footer>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/powerbi.min.js"></script>
+    <script src="/public/js/index.js"></script>
+  </body>
+</html>

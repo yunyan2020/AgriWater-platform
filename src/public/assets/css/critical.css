@@ -1,0 +1,21 @@
+/* critical.css */
+
+/* General body reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Header styling */
+header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main content area */
+main {
+  padding: 20px;
+}

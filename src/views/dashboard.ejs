@@ -1,0 +1,112 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>AmoreAqua Dashboard</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <!-- Preload the critical CSS -->
+    <link rel="preload" href="/public/assets/css/critical.css" as="style" />
+  
+    <!-- Load the critical CSS file -->
+    <link rel="stylesheet" href="/public/assets/css/critical.css" />
+    <!-- Preconnect to essential origins -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+      media="print"
+      onload="this.onload=null;this.removeAttribute('media');"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Asynchronous loading of critical CSS -->
+    <link
+      rel="preload"
+      href="/public/assets/css/bootstrap.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="/public/assets/css/bootstrap-icons.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="/public/assets/css/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link href="/public/assets/css/bootstrap.min.css" rel="stylesheet" />
+      <link href="/public/assets/css/bootstrap-icons.css" rel="stylesheet" />
+      <link href="/public/assets/css/style.css" rel="stylesheet" />
+    </noscript>
+  </head>
+
+  <body>
+    <%- include('includes/header', {isAuthenticated: isAuthenticated, claims:
+    claims}); %>
+    <!-- ======= Header ======= -->
+
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+      <div class="search-wrapper">
+        <input
+          type="text"
+          class="form-control"
+          id="search"
+          name="search"
+          placeholder="Search..."
+        />
+      </div>
+      <ul class="sidebar-nav" id="sidebar-nav"></ul>
+    </aside>
+    <!-- End Sidebar-->
+
+    <main id="main" class="main">
+      <!-- <div class="pagetitle">
+         <h1>Dashboard</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </nav> 
+      </div> -->
+      <!-- End Page Title -->
+
+      <section class="section dashboard">
+        <div id="bi_content">
+          <section id="report-container"></section>
+          <section class="error-container m-5"></section>
+        </div>
+      </section>
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer class="footer"><%- include('includes/footer'); %></footer>
+    <!-- End Footer -->
+  </body>
+
+  <!-- Vendor JS Files -->
+  <script defer src="public/assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="public/assets/js/jquery-3.7.1.min.js"></script>
+  <script defer src="public/assets/js/powerbi.min.js"></script>
+  <script defer src="public/assets/js/index.js"></script>
+
+  <!-- Template Main JS File -->
+  <script defer src="public/assets/js/main.js"></script>
+</html>

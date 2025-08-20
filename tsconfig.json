@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "target": "es6",
+    "moduleResolution": "nodenext",
+    "lib": ["esnext"],
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "allowJs": true,
+    "strict": false,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": ["node"],
+    "paths": {
+      "@types/*": ["./src/types/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

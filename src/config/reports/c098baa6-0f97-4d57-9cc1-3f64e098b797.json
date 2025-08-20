@@ -1,0 +1,28 @@
+{
+    "workspace": "cf9eb474-d74e-417e-9af8-8e551f1e0aca",
+    "name": "Sydvatten",
+    "reports": {
+         "Sensor övervakning": {
+            "Sensor": "c70f0ac4-f1a8-4240-a059-7d09200e9369"            
+        },
+         "Termoklin Status Profil mätningar": {
+            "Termoklin Status Profil mätningar": "5856652a-7615-458b-b865-eaaac5d0af4d"
+        },
+        "Profil mätning:andra parameter": {
+            "Profil mätning:andra parameter": "b8187dab-3dbd-46f9-b22c-bd5921b42c3d"
+        },
+         "Vombsjön alger arter dynamik": {
+            "Alger arter dynamik": "32ba34a4-73a9-471e-9161-f2ff6ced8ace"
+        },
+        "Cyanotoxin övervakning": {
+            "Snabb toxin analys": "3255b450-9ad3-4cb0-b1e4-ffd864009770",  
+            "Toxinprofil analys":"54ccee52-b5c6-4178-8a2b-488a4aa1d009"                     
+        },   
+         "Råvatten övervakning": {
+            "Sydvatten SLU Årsjämförelse": "bc9198aa-b5ba-4dae-b39a-a6a92f1c139b",
+            "Receipientkontroll Årsjämförelse": "f456d872-404b-4108-a52c-b0df6f8dc878"
+        }     
+        
+       
+    }
+}
