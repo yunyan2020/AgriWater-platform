@@ -164,17 +164,19 @@ async function getEmbedParamsForMultipleReports(
   // Create array of embedReports for mapping
   let reportsDetail = [];
   let datasetIds = [];
-
+  
+  /*
   console.log(`🔍 Attempting to access workspace: ${workspaceId}`);
   console.log(`🔍 Report IDs: ${reportIds.join(", ")}`);
+  */
 
   await Promise.allSettled(
     reportIds.map(async (reportId) => {
       const reportInGroupApi = `https://api.powerbi.com/v1.0/myorg/groups/${workspaceId}/reports/${reportId}`;
       const headers = await getRequestHeader();
 
-      console.log(`🔍 Fetching report: ${reportId}`);
-      console.log(`🔍 API URL: ${reportInGroupApi}`);
+      //console.log(`🔍 Fetching report: ${reportId}`);
+      //console.log(`🔍 API URL: ${reportInGroupApi}`);
 
       try {
         // Get report info by calling the PowerBI REST API
@@ -214,8 +216,10 @@ async function getEmbedParamsForMultipleReports(
 
         // Convert result in json to retrieve values
         const resultJson = await result.json();
+        /*
         console.log(`📊 Report: ${resultJson.name}`);
         console.log(`📁 Dataset ID: ${resultJson.datasetId}`);
+        */
 
         // Store result into PowerBiReportDetails object
         const reportDetails = new PowerBiReportDetails(
@@ -235,13 +239,13 @@ async function getEmbedParamsForMultipleReports(
       }
     })
   );
-
+  /*
   console.log("📋 All collected dataset IDs:", datasetIds);
   console.log(
     "📋 All report details:",
     reportsDetail.map((r) => ({ id: r.reportId, name: r.reportName }))
   );
-
+  
   // Append to existing list of datasets to achieve dynamic binding later
   if (additionalDatasetIds) {
     datasetIds.push(...additionalDatasetIds);
@@ -255,6 +259,8 @@ async function getEmbedParamsForMultipleReports(
     console.log("Original:", datasetIds);
     console.log("Unique:", uniqueDatasetIds);
   }
+  
+  */
 
   // Get Embed token multiple resources
   let embedToken = await getEmbedTokenForMultipleReportsSingleWorkspace(
@@ -334,11 +340,13 @@ async function getEmbedTokenForMultipleReportsSingleWorkspace(
   datasetIds,
   targetWorkspaceId
 ) {
-
+  /*
   console.log("🔍 Starting embed token generation...");
   console.log("📊 Report IDs:", reportIds);
   console.log("📁 Dataset IDs:", datasetIds);
   console.log("🏢 Target Workspace ID:", targetWorkspaceId);
+
+  */
 
   // Add dataset ids in the request
   let formData = { accessLevel: "Create", datasets: [], reports: [] };
@@ -363,11 +371,12 @@ async function getEmbedTokenForMultipleReportsSingleWorkspace(
       id: targetWorkspaceId,
     });
   }
-  console.log("📋 Form data being sent:", JSON.stringify(formData, null, 2));
+  // console.log("📋 Form data being sent:", JSON.stringify(formData, null, 2));
 
   const embedTokenApi = "https://api.powerbi.com/v1.0/myorg/GenerateToken";
   const headers = await getRequestHeader();
-  console.log("🔑 Headers being sent:", JSON.stringify(headers, null, 2));
+
+  //console.log("🔑 Headers being sent:", JSON.stringify(headers, null, 2));
 
 
 

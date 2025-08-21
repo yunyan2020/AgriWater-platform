@@ -235,7 +235,7 @@ export async function getList(req, res) {
 
 async function getReports(workspace: string, report_id: string) {
   const headers = await getRequestHeader();
-  console.log("Debug getReports headers", headers);
+  // console.log("Debug getReports headers", headers);
   const reportInGroupApi = `https://api.powerbi.com/v1.0/myorg/groups/${workspace}/reports/${report_id}/pages`;
   const result = await fetch(reportInGroupApi, {
     method: "GET",

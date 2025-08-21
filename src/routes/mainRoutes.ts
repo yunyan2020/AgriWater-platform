@@ -111,50 +111,5 @@ export default (msid) => {
     }
   });
 
-  // Callback route to handle the response from Azure AD
-  router.get("/consent/callback", async (req, res) => {
-    const { code } = req.query;
-
-    if (!code) {
-      return res.status(400).send("Authorization code not found");
-    }
-
-    const msalConfig = {
-      auth: {
-        clientId: get_string("PBI_APP_CLIENT_ID"),
-        authority: `${get_string("PBI_APP_AUTHORITY_URL")}${get_string(
-          "PBI_APP_TENANT_ID"
-        )}`,
-        clientSecret: get_string("PBI_APP_CLIENT_SECRET"),
-      },
-    };
-
-    const confidentialClientApp = new msal.ConfidentialClientApplication(
-      msalConfig
-    );
-
-    const tokenRequest = {
-      code: code as string,
-      scopes: [get_string("PBI_APP_SCOPE_BASE")],
-      redirectUri: get_string("REDIRECT_URI"),
-    };
-
-    try {
-      const response = await confidentialClientApp.acquireTokenByCode(
-        tokenRequest
-      );
-      console.log("Consent successful:", response.account?.username);
-      res.send(`
-      <h2>Consent Successful!</h2>
-      <p>User ${response.account?.username} has consented to the application.</p>
-      <p>You can now use the MasterUser authentication mode.</p>
-      <a href="/">Return to App</a>
-    `);
-    } catch (error) {
-      console.error("Error during token acquisition:", error);
-      res.status(500).send("Error during consent process");
-    }
-  });
-
   return router;
 };
